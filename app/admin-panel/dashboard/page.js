@@ -301,6 +301,23 @@ export default function Dashboard() {
                               Editar
                             </Link>
                             <button
+                              onClick={() => {
+                                if (confirm('¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.')) {
+                                  fetch(`/api/productos/${producto._id}`, {
+                                    method: 'DELETE',
+                                  }).then(response => {
+                                    if (response.ok) {
+                                      cargarProductos();
+                                      setMensaje({ tipo: 'exito', texto: 'Producto eliminado correctamente' });
+                                    } else {
+                                      setMensaje({ tipo: 'error', texto: 'Error al eliminar el producto' });
+                                    }
+                                  }).catch(error => {
+                                    console.error('Error:', error);
+                                    setMensaje({ tipo: 'error', texto: 'Error al eliminar el producto' });
+                                  });
+                                }
+                              }}
                               className="text-red-600 hover:text-red-900"
                             >
                               Eliminar
