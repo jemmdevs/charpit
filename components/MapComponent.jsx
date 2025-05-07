@@ -16,8 +16,9 @@ const customIcon = new Icon({
 });
 
 export default function MapComponent() {
-  // Coordenadas del restaurante (ejemplo: Ciudad de México)
-  const position = [19.432608, -99.133209];
+  // Coordenadas del restaurante en Alcalá de Guadaíra, Sevilla
+  // Convertidas de 37°20'31.5"N 5°49'23.4"W a formato decimal
+  const position = [37.342083, -5.823167]; // Coordenadas exactas para Av. de la Escultora 'la Roldana', 15
   
   return (
     <MapContainer 
@@ -33,9 +34,10 @@ export default function MapComponent() {
         <Popup>
           <div>
             <h3 className="font-bold text-gray-800">Char Pit</h3>
-            <p className="text-gray-700">Calle Principal 123, Ciudad de México</p>
+            <p className="text-gray-700">Av. de la Escultora 'la Roldana', 15, local 14</p>
+            <p className="text-gray-700">41500 Alcalá de Guadaíra, Sevilla</p>
             <a 
-              href="https://maps.google.com/?q=19.432608,-99.133209" 
+              href="https://maps.google.com/?q=37.342083,-5.823167" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-amber-600 hover:text-amber-800"

@@ -1,15 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import MapSection from '@/components/MapSection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-amber-50/30">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center bg-black">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <div className="relative z-20 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">Char Pit</h1>
-          <p className="text-xl md:text-2xl mb-8 text-white">Auténtica cocina mexicana</p>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10"></div>
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent z-10"></div>
+        <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
+          <div className="inline-block mb-3 px-4 py-1 bg-amber-600/80 rounded-full">
+            <span className="text-white text-sm font-medium tracking-wider">TRADICIÓN Y SABOR</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+            The Char Pit
+            <span className="block text-2xl md:text-3xl mt-2 font-light text-amber-200">ASADOR & GRILL</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-white opacity-90">El mejor asador de Sevilla</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/menu" 
@@ -28,78 +37,84 @@ export default function Home() {
       </section>
 
       {/* Secciones Principales */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-stone-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-60"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-60"></div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Nuestra Historia</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800 relative inline-block">
+              <span className="relative z-10">Nuestra Historia</span>
+              <span className="absolute -bottom-1 left-0 w-1/3 h-1 bg-amber-400"></span>
+            </h2>
             <p className="text-gray-800 mb-6">
-              Char Pit nació de la pasión por la auténtica cocina mexicana. Desde nuestros inicios, 
-              nos hemos dedicado a ofrecer los sabores más tradicionales con un toque contemporáneo, 
-              utilizando ingredientes frescos y técnicas culinarias que respetan nuestras raíces.
+              The Char Pit nació de la pasión por la auténtica cocina de asador. Desde nuestros inicios, 
+              nos hemos dedicado a ofrecer los mejores cortes de carne a la parrilla con un toque único, 
+              utilizando ingredientes frescos y técnicas culinarias que realzan el sabor natural de nuestros productos.
             </p>
-            <Link 
-              href="/nosotros" 
-              className="text-amber-600 hover:text-amber-800 font-semibold"
-            >
-              Conoce más sobre nosotros →
-            </Link>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-xl border border-gray-200">
-            {/* Aquí iría una imagen del restaurante */}
-            <div className="bg-gray-300 h-80 w-full"></div>
+          <div className="rounded-lg overflow-hidden shadow-xl border border-amber-200">
+              <img 
+                src="/images/aboutImage.webp" 
+                alt="The Char Pit" 
+                className="w-full h-auto object-cover rounded-lg transform hover:scale-105 transition-transform duration-500"
+              />
           </div>
         </div>
       </section>
 
       {/* Especialidades */}
-      <section className="py-16 px-4 bg-amber-50">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-16 px-4 bg-amber-50/70 relative">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/30 rounded-full -mr-16 -mt-16"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-200/30 rounded-full -ml-12 -mb-12"></div>
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="mb-12">
+            <span className="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-3">ESPECIALIDADES DE LA CASA</span>
             <h2 className="text-3xl font-bold mb-3 text-gray-800">Nuestras Especialidades</h2>
             <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">Descubre nuestros platos más populares, preparados con ingredientes frescos y auténticas recetas mexicanas.</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Descubre nuestros platos más populares, preparados con ingredientes frescos y las mejores carnes a la parrilla.</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-100/30 to-transparent -z-10 rounded-xl"></div>
             {/* Plato 1 */}
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full">
               <div className="border-b border-amber-200 pb-4 mb-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-gray-800">Tacos al Pastor</h3>
+                <h3 className="text-xl font-bold text-gray-800">Chuletón de Vaca Madurada</h3>
                 <div className="bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                  <span className="text-amber-700 font-bold">9.50 €</span>
+                  <span className="text-amber-700 font-bold">24.50 €</span>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4 flex-grow">Deliciosos tacos de cerdo marinado con piña y cilantro fresco.</p>
+              <p className="text-gray-700 mb-4 flex-grow">Exquisito chuletón de vaca madurada 30 días, cocinado a la parrilla con leña de encina.</p>
               <div className="bg-gray-50 p-3 rounded-md border-l-4 border-amber-400">
-                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Ingredientes:</span> Tortilla de maíz, cerdo marinado, piña, cilantro, cebolla</p>
+                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Acompañamiento:</span> Patatas asadas, pimientos de Padrón y sal gourmet</p>
               </div>
             </div>
             
             {/* Plato 2 */}
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full">
               <div className="border-b border-amber-200 pb-4 mb-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-gray-800">Enchiladas Suizas</h3>
+                <h3 className="text-xl font-bold text-gray-800">Costillas BBQ</h3>
                 <div className="bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                  <span className="text-amber-700 font-bold">12.95 €</span>
+                  <span className="text-amber-700 font-bold">18.95 €</span>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4 flex-grow">Tortillas rellenas de pollo bañadas en salsa verde y queso gratinado.</p>
+              <p className="text-gray-700 mb-4 flex-grow">Jugosas costillas de cerdo cocinadas a baja temperatura y terminadas a la parrilla con nuestra salsa BBQ casera.</p>
               <div className="bg-gray-50 p-3 rounded-md border-l-4 border-amber-400">
-                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Ingredientes:</span> Tortilla de maíz, pollo, salsa verde, queso, crema</p>
+                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Acompañamiento:</span> Ensalada de col, mazorca de maíz asada y patatas fritas</p>
               </div>
             </div>
             
             {/* Plato 3 */}
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full">
               <div className="border-b border-amber-200 pb-4 mb-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-gray-800">Guacamole Fresco</h3>
+                <h3 className="text-xl font-bold text-gray-800">Secreto Ibérico</h3>
                 <div className="bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                  <span className="text-amber-700 font-bold">7.50 €</span>
+                  <span className="text-amber-700 font-bold">16.50 €</span>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4 flex-grow">Preparado al momento con aguacates, tomate, cebolla y chile serrano.</p>
+              <p className="text-gray-700 mb-4 flex-grow">Delicioso corte de cerdo ibérico a la parrilla, jugoso y con el punto perfecto de cocción.</p>
               <div className="bg-gray-50 p-3 rounded-md border-l-4 border-amber-400">
-                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Ingredientes:</span> Aguacate, tomate, cebolla, chile serrano, cilantro, limón</p>
+                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Acompañamiento:</span> Patatas a lo pobre, pimientos asados y alioli casero</p>
               </div>
             </div>
           </div>
@@ -119,21 +134,7 @@ export default function Home() {
       </section>
 
       {/* Ubicación */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">Encuéntranos</h2>
-          <p className="text-gray-800 mb-8">Visítanos y disfruta de la mejor experiencia gastronómica mexicana</p>
-          <div className="h-96 bg-gray-200 rounded-lg mb-6 border border-gray-300">
-            {/* Aquí irá el mapa de OpenStreetMap */}
-          </div>
-          <div className="text-left max-w-md mx-auto bg-gray-50 p-6 rounded-lg border border-gray-200">
-            <p className="font-bold text-gray-800">Dirección:</p>
-            <p className="text-gray-800 mb-2">Calle Principal 123, Ciudad de México</p>
-            <p className="font-bold text-gray-800">Horario:</p>
-            <p className="text-gray-800">Lunes a Domingo: 12:00 - 23:00</p>
-          </div>
-        </div>
-      </section>
+      <MapSection />
     </div>
   );
 }

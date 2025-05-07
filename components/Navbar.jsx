@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -16,8 +15,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-amber-600">Char Pit</span>
+            <Link href="/" className="flex-shrink-0 flex items-center gap-2">
+              <img 
+                src="/images/logocharpit.jpg" 
+                alt="The Char Pit" 
+                className="h-10 w-auto rounded-md"
+              />
+              <span className="text-2xl font-bold text-amber-600">The Char Pit</span>
             </Link>
           </div>
           
