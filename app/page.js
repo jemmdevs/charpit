@@ -65,7 +65,6 @@ export default function Home() {
       {/* Especialidades */}
       <section className="py-16 px-4 bg-amber-50/70 relative">
         <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/30 rounded-full -mr-16 -mt-16"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-200/30 rounded-full -ml-12 -mb-12"></div>
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="mb-12">
             <span className="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-3">ESPECIALIDADES DE LA CASA</span>
@@ -76,45 +75,66 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-100/30 to-transparent -z-10 rounded-xl"></div>
-            {/* Plato 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full">
-              <div className="border-b border-amber-200 pb-4 mb-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-gray-800">Chuletón de Vaca Madurada</h3>
-                <div className="bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                  <span className="text-amber-700 font-bold">24.50 €</span>
-                </div>
-              </div>
-              <p className="text-gray-700 mb-4 flex-grow">Exquisito chuletón de vaca madurada 30 días, cocinado a la parrilla con leña de encina.</p>
-              <div className="bg-gray-50 p-3 rounded-md border-l-4 border-amber-400">
-                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Acompañamiento:</span> Patatas asadas, pimientos de Padrón y sal gourmet</p>
-              </div>
-            </div>
-            
-            {/* Plato 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full">
+            {/* Plato 1 - Costillas */}
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full overflow-hidden">
               <div className="border-b border-amber-200 pb-4 mb-4 flex justify-between items-center">
                 <h3 className="text-xl font-bold text-gray-800">Costillas BBQ</h3>
                 <div className="bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
                   <span className="text-amber-700 font-bold">18.95 €</span>
                 </div>
               </div>
+              <div className="mb-4 -mx-6 -mt-2">
+                <img 
+                  src="/images/costillas.png" 
+                  alt="Costillas BBQ" 
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               <p className="text-gray-700 mb-4 flex-grow">Jugosas costillas de cerdo cocinadas a baja temperatura y terminadas a la parrilla con nuestra salsa BBQ casera.</p>
               <div className="bg-gray-50 p-3 rounded-md border-l-4 border-amber-400">
-                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Acompañamiento:</span> Ensalada de col, mazorca de maíz asada y patatas fritas</p>
+                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Ingredientes:</span> Costillas de cerdo, salsa BBQ casera, especias seleccionadas</p>
               </div>
             </div>
             
-            {/* Plato 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full">
+            {/* Plato 2 - Burrito */}
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full overflow-hidden">
               <div className="border-b border-amber-200 pb-4 mb-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-gray-800">Secreto Ibérico</h3>
+                <h3 className="text-xl font-bold text-gray-800">Burrito Gringo</h3>
                 <div className="bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                  <span className="text-amber-700 font-bold">16.50 €</span>
+                  <span className="text-amber-700 font-bold">12.50 €</span>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4 flex-grow">Delicioso corte de cerdo ibérico a la parrilla, jugoso y con el punto perfecto de cocción.</p>
+              <div className="mb-4 -mx-6 -mt-2">
+                <img 
+                  src="/images/burrito.png" 
+                  alt="Burrito Gringo" 
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <p className="text-gray-700 mb-4 flex-grow">Delicioso burrito relleno de carne de ternera a la parrilla, arroz, frijoles y queso, envuelto en una tortilla de trigo.</p>
               <div className="bg-gray-50 p-3 rounded-md border-l-4 border-amber-400">
-                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Acompañamiento:</span> Patatas a lo pobre, pimientos asados y alioli casero</p>
+                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Ingredientes:</span> Tortilla de trigo, carne de ternera, arroz, frijoles, queso, pico de gallo</p>
+              </div>
+            </div>
+            
+            {/* Plato 3 - Nachos */}
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col h-full overflow-hidden">
+              <div className="border-b border-amber-200 pb-4 mb-4 flex justify-between items-center">
+                <h3 className="text-xl font-bold text-gray-800">Nachos Supremos</h3>
+                <div className="bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                  <span className="text-amber-700 font-bold">10.95 €</span>
+                </div>
+              </div>
+              <div className="mb-4 -mx-6 -mt-2">
+                <img 
+                  src="/images/nachos.png" 
+                  alt="Nachos Supremos" 
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <p className="text-gray-700 mb-4 flex-grow">Crujientes nachos de maíz cubiertos con queso fundido, guacamole, crema agria, jalapeños y pico de gallo.</p>
+              <div className="bg-gray-50 p-3 rounded-md border-l-4 border-amber-400">
+                <p className="text-sm text-gray-600 text-left"><span className="font-medium">Ingredientes:</span> Totopos de maíz, queso cheddar, guacamole, crema agria, jalapeños, pico de gallo</p>
               </div>
             </div>
           </div>
