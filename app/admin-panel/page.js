@@ -21,7 +21,7 @@ export default function AdminPanel() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center border border-gray-200">
         <h1 className="text-2xl font-bold text-amber-600 mb-4">Panel de Administración</h1>
         <p className="text-gray-800 mb-4">Cargando...</p>
       </div>

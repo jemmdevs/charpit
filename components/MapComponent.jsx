@@ -32,8 +32,8 @@ export default function MapComponent() {
       <Marker position={position} icon={customIcon}>
         <Popup>
           <div>
-            <h3 className="font-bold">Char Pit</h3>
-            <p>Calle Principal 123, Ciudad de México</p>
+            <h3 className="font-bold text-gray-800">Char Pit</h3>
+            <p className="text-gray-700">Calle Principal 123, Ciudad de México</p>
             <a 
               href="https://maps.google.com/?q=19.432608,-99.133209" 
               target="_blank" 

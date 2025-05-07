@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md container-with-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -23,16 +23,16 @@ export default function Navbar() {
           
           {/* Menú de navegación para pantallas medianas y grandes */}
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium">
+            <Link href="/" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium text-dark">
               Inicio
             </Link>
-            <Link href="/menu" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium">
+            <Link href="/menu" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium text-dark">
               Carta
             </Link>
-            <Link href="/reservas" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium">
+            <Link href="/reservas" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium text-dark">
               Reservas
             </Link>
-            <Link href="/ubicacion" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium">
+            <Link href="/ubicacion" className="text-gray-700 hover:text-amber-600 px-3 py-2 rounded-md font-medium text-dark">
               Ubicación
             </Link>
             <Link 
@@ -83,28 +83,28 @@ export default function Navbar() {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link 
             href="/" 
-            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium"
+            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium text-dark"
             onClick={() => setMenuAbierto(false)}
           >
             Inicio
           </Link>
           <Link 
             href="/menu" 
-            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium"
+            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium text-dark"
             onClick={() => setMenuAbierto(false)}
           >
             Carta
           </Link>
           <Link 
             href="/reservas" 
-            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium"
+            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium text-dark"
             onClick={() => setMenuAbierto(false)}
           >
             Reservas
           </Link>
           <Link 
             href="/ubicacion" 
-            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium"
+            className="text-gray-700 hover:text-amber-600 block px-3 py-2 rounded-md font-medium text-dark"
             onClick={() => setMenuAbierto(false)}
           >
             Ubicación

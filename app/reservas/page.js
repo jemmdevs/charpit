@@ -74,8 +74,8 @@ export default function Reservas() {
 
   return (
     <div className="min-h-screen bg-amber-50 py-12 px-4">
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-3xl font-bold text-center mb-8">Reserva tu mesa</h1>
+      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 border border-gray-200">
+        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Reserva tu mesa</h1>
         
         {mensaje.texto && (
           <div className={`p-4 mb-6 rounded-md ${
@@ -88,7 +88,7 @@ export default function Reservas() {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">Nombre *</label>
+              <label htmlFor="nombre" className="block text-sm font-medium text-dark mb-1">Nombre *</label>
               <input
                 type="text"
                 id="nombre"
@@ -96,12 +96,12 @@ export default function Reservas() {
                 value={formData.nombre}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
               />
             </div>
             
             <div>
-              <label htmlFor="apellidos" className="block text-sm font-medium text-gray-700 mb-1">Apellidos *</label>
+              <label htmlFor="apellidos" className="block text-sm font-medium text-dark mb-1">Apellidos *</label>
               <input
                 type="text"
                 id="apellidos"
@@ -109,14 +109,14 @@ export default function Reservas() {
                 value={formData.apellidos}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+              <label htmlFor="email" className="block text-sm font-medium text-dark mb-1">Email *</label>
               <input
                 type="email"
                 id="email"
@@ -124,12 +124,12 @@ export default function Reservas() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
               />
             </div>
             
             <div>
-              <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-1">Teléfono *</label>
+              <label htmlFor="telefono" className="block text-sm font-medium text-dark mb-1">Teléfono *</label>
               <input
                 type="tel"
                 id="telefono"
@@ -137,14 +137,14 @@ export default function Reservas() {
                 value={formData.telefono}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <label htmlFor="fecha" className="block text-sm font-medium text-gray-700 mb-1">Fecha *</label>
+              <label htmlFor="fecha" className="block text-sm font-medium text-dark mb-1">Fecha *</label>
               <input
                 type="date"
                 id="fecha"
@@ -153,19 +153,19 @@ export default function Reservas() {
                 onChange={handleChange}
                 required
                 min={new Date().toISOString().split('T')[0]}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
               />
             </div>
             
             <div>
-              <label htmlFor="hora" className="block text-sm font-medium text-gray-700 mb-1">Hora *</label>
+              <label htmlFor="hora" className="block text-sm font-medium text-dark mb-1">Hora *</label>
               <select
                 id="hora"
                 name="hora"
                 value={formData.hora}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
               >
                 <option value="">Selecciona una hora</option>
                 <option value="13:00">13:00</option>
@@ -182,14 +182,14 @@ export default function Reservas() {
             </div>
             
             <div>
-              <label htmlFor="comensales" className="block text-sm font-medium text-gray-700 mb-1">Comensales *</label>
+              <label htmlFor="comensales" className="block text-sm font-medium text-dark mb-1">Comensales *</label>
               <select
                 id="comensales"
                 name="comensales"
                 value={formData.comensales}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                   <option key={num} value={num}>{num} {num === 1 ? 'persona' : 'personas'}</option>
@@ -199,14 +199,14 @@ export default function Reservas() {
           </div>
 
           <div>
-            <label htmlFor="notas" className="block text-sm font-medium text-gray-700 mb-1">Notas o peticiones especiales</label>
+            <label htmlFor="notas" className="block text-sm font-medium text-dark mb-1">Notas o peticiones especiales</label>
             <textarea
               id="notas"
               name="notas"
               value={formData.notas}
               onChange={handleChange}
               rows="4"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
             ></textarea>
           </div>
 

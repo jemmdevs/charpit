@@ -155,7 +155,7 @@ export default function Dashboard() {
           {activeTab === 'reservas' && (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-bold">Gestión de Reservas</h2>
+                <h2 className="text-xl font-bold heading-dark">Gestión de Reservas</h2>
                 <button 
                   onClick={cargarReservas}
                   className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md transition-colors"
@@ -167,7 +167,7 @@ export default function Dashboard() {
               {cargando ? (
                 <p className="text-center py-8">Cargando reservas...</p>
               ) : reservas.length > 0 ? (
-                <div className="bg-white rounded-lg shadow overflow-hidden">
+                <div className="bg-white rounded-lg shadow overflow-hidden container-with-border">
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
@@ -239,7 +239,7 @@ export default function Dashboard() {
                   </table>
                 </div>
               ) : (
-                <div className="text-center py-8 bg-white rounded-lg shadow">
+                <div className="text-center py-8 bg-white rounded-lg shadow container-with-border">
                   <p className="text-gray-500">No hay reservas disponibles</p>
                 </div>
               )}
@@ -249,7 +249,7 @@ export default function Dashboard() {
           {activeTab === 'productos' && (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-bold">Gestión de Productos</h2>
+                <h2 className="text-xl font-bold heading-dark">Gestión de Productos</h2>
                 <div className="flex gap-4">
                   <button 
                     onClick={cargarProductos}
@@ -269,7 +269,7 @@ export default function Dashboard() {
               {cargando ? (
                 <p className="text-center py-8">Cargando productos...</p>
               ) : productos.length > 0 ? (
-                <div className="bg-white rounded-lg shadow overflow-hidden">
+                <div className="bg-white rounded-lg shadow overflow-hidden container-with-border">
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
@@ -312,7 +312,7 @@ export default function Dashboard() {
                   </table>
                 </div>
               ) : (
-                <div className="text-center py-8 bg-white rounded-lg shadow">
+                <div className="text-center py-8 bg-white rounded-lg shadow container-with-border">
                   <p className="text-gray-500">No hay productos disponibles</p>
                   <Link 
                     href="/admin-panel/productos/nuevo"
