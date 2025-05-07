@@ -3,6 +3,12 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
 import clientPromise from '@/lib/mongodb';
 
+// Determinar la URL correcta para NextAuth
+const useSecureCookies = process.env.VERCEL_URL ? true : false;
+const nextAuthUrl = process.env.VERCEL_URL 
+  ? `https://${process.env.VERCEL_URL}` 
+  : process.env.NEXTAUTH_URL;
+
 // Configuración de NextAuth
 const handler = NextAuth({
   adapter: MongoDBAdapter(clientPromise),
@@ -50,6 +56,8 @@ const handler = NextAuth({
     error: '/admin-panel/login',
   },
   secret: process.env.NEXTAUTH_SECRET,
+  url: nextAuthUrl,
+  useSecureCookies: useSecureCookies,
 });
 
 export { handler as GET, handler as POST };
