@@ -5,7 +5,7 @@ const ProductoSchema = new mongoose.Schema({
   categoria: {
     type: String,
     required: true,
-    enum: ['entrada', 'plato', 'postre', 'bebida']
+    enum: ['entrantes', 'ensaladas', 'pasta', 'fundidos del oeste', 'burritos', 'pollo', 'costillas', 'ternera']
   },
   nombre: {
     type: String,

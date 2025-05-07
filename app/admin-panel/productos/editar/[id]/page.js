@@ -208,10 +208,14 @@ export default function EditarProducto({ params }) {
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 text-gray-800"
                   >
                     <option value="">Selecciona una categoría</option>
-                    <option value="entrada">Entrada</option>
-                    <option value="plato">Plato principal</option>
-                    <option value="postre">Postre</option>
-                    <option value="bebida">Bebida</option>
+                    <option value="entrantes">Entrantes</option>
+                    <option value="ensaladas">Ensaladas</option>
+                    <option value="pasta">Pasta</option>
+                    <option value="fundidos del oeste">Fundidos del Oeste</option>
+                    <option value="burritos">Burritos</option>
+                    <option value="pollo">Pollo</option>
+                    <option value="costillas">Costillas</option>
+                    <option value="ternera">Ternera</option>
                   </select>
                 </div>
               </div>

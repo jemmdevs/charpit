@@ -28,7 +28,7 @@ export default function Menu() {
     obtenerProductos();
   }, []);
 
-  const categorias = ['todos', 'entrada', 'plato', 'postre', 'bebida'];
+  const categorias = ['todos', 'entrantes', 'ensaladas', 'pasta', 'fundidos del oeste', 'burritos', 'pollo', 'costillas', 'ternera'];
   
   const productosFiltrados = categoriaActiva === 'todos' 
     ? productos 
@@ -87,7 +87,7 @@ export default function Menu() {
             
             <div className="relative z-10">
               {/* Agrupar productos por categoría */}
-              {['entrada', 'plato', 'postre', 'bebida'].map(categoria => {
+              {['entrantes', 'ensaladas', 'pasta', 'fundidos del oeste', 'burritos', 'pollo', 'costillas', 'ternera'].map(categoria => {
                 const productosCategoria = productosFiltrados.filter(
                   p => categoriaActiva === 'todos' ? p.categoria === categoria : true
                 );
