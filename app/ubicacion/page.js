@@ -28,7 +28,7 @@ export default function Ubicacion() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-gray-800/60 p-6 rounded-lg border border-gray-700 shadow-md">
               <h2 className="text-xl font-bold mb-4 text-amber-400 font-heading">Dirección</h2>
-              <p className="text-gray-300 mb-2">Av. de la Escultora 'la Roldana', 15, local 14</p>
+              <p className="text-gray-300 mb-2">Av. de la Escultora &apos;la Roldana&apos;, 15, local 14</p>
               <p className="text-gray-300 mb-2">41500 Alcalá de Guadaíra, Sevilla</p>
               <p className="text-gray-300 mb-6">España</p>
               

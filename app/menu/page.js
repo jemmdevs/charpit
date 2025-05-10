@@ -39,7 +39,13 @@ export default function Menu() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <div className="mb-6 inline-block">
-            <img src="/images/logocharpit.jpg" alt="The Char Pit" className="h-24 w-auto mx-auto rounded-md border border-amber-700/50" />
+            <Image 
+              src="/images/logocharpit.jpg" 
+              alt="The Char Pit" 
+              width={96} 
+              height={96} 
+              className="h-24 w-auto mx-auto rounded-md border border-amber-700/50"
+            />
           </div>
           <h1 className="text-4xl font-bold text-amber-500 mb-3 font-heading">Nuestra Carta</h1>
           <div className="w-24 h-1 bg-amber-600/40 mx-auto mb-6"></div>
@@ -77,7 +83,13 @@ export default function Menu() {
           <div className="bg-gray-800 border border-gray-700 rounded-lg p-8 shadow-xl max-w-4xl mx-auto relative overflow-hidden">
             {/* Marca de agua */}
             <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
-              <img src="/images/logocharpit.jpg" alt="" className="w-96 h-96 object-contain" />
+              <Image 
+                src="/images/logocharpit.jpg" 
+                alt="" 
+                width={384} 
+                height={384} 
+                className="w-96 h-96 object-contain"
+              />
             </div>
             
             {/* Decoración esquinas */}

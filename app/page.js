@@ -69,9 +69,11 @@ export default function Home() {
             </p>
           </div>
           <div className="rounded-lg overflow-hidden shadow-xl border border-gray-700">
-              <img 
+              <Image 
                 src="/images/aboutImage.webp" 
                 alt="The Char Pit" 
+                width={600}
+                height={400}
                 className="w-full h-auto object-cover rounded-lg transform hover:scale-105 transition-transform duration-500"
               />
           </div>
@@ -101,9 +103,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
-                <img 
+                <Image 
                   src="/images/costillas.png" 
-                  alt="Costillas BBQ" 
+                  alt="Costillas BBQ"
+                  width={400}
+                  height={200}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -122,9 +126,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
-                <img 
+                <Image 
                   src="/images/burrito.png" 
-                  alt="Burrito Gringo" 
+                  alt="Burrito Gringo"
+                  width={400}
+                  height={200}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -143,9 +149,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
-                <img 
+                <Image 
                   src="/images/nachos.png" 
-                  alt="Nachos Supremos" 
+                  alt="Nachos Supremos"
+                  width={400}
+                  height={200}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>

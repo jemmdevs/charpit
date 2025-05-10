@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [menuAbierto, setMenuAbierto] = useState(false);
@@ -16,9 +17,11 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center gap-3">
-              <img 
+              <Image 
                 src="/images/logocharpit.jpg" 
-                alt="The Char Pit" 
+                alt="The Char Pit"
+                width={48}
+                height={48}
                 className="h-12 w-auto rounded-md border border-amber-700/50"
               />
               <div className="flex flex-col">
