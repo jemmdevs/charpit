@@ -133,3 +133,43 @@ input, select, textarea, option {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
+/* Estilos adicionales para arreglar problemas de desbordamiento */
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.no-horizontal-scroll {
+  overflow-x: hidden;
+}
+
+/* Configuración de fuentes personalizadas */
+@layer base {
+  .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Estilos para el mapa Leaflet */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.leaflet-control-container {
+  position: absolute;
+  z-index: 10;
+}
+
+.leaflet-pane {
+  z-index: 1;
+}
+
+/* Asegurarnos que el popup esté por encima de otros elementos */
+.leaflet-popup {
+  z-index: 20 !important;
+}

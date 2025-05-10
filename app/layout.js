@@ -12,10 +12,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className="no-horizontal-scroll">
-      <body className="antialiased no-horizontal-scroll">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossOrigin=""
+          precedence="default"
+        />
+      </head>
+      <body className="overflow-x-hidden">
         <AuthProvider>
           <Navbar />
-          <main className="no-horizontal-scroll">{children}</main>
+          <main>{children}</main>
           <Footer />
         </AuthProvider>
       </body>

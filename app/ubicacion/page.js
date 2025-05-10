@@ -7,10 +7,25 @@ import dynamic from 'next/dynamic';
 // Importación dinámica del mapa para evitar errores de SSR
 const MapComponent = dynamic(
   () => import('@/components/MapComponent'),
-  { ssr: false }
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="h-full w-full bg-gray-700 flex items-center justify-center">
+        <p className="text-amber-400">Cargando mapa...</p>
+      </div>
+    )
+  }
 );
 
 export default function Ubicacion() {
+  // Estado para controlar si el componente está montado
+  const [isMounted, setIsMounted] = useState(false);
+  
+  // Efecto para marcar el componente como montado
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  
   return (
     <div className="min-h-screen bg-gray-900 py-16 px-4 overflow-hidden">
       <div className="max-w-5xl mx-auto bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700">
@@ -21,8 +36,8 @@ export default function Ubicacion() {
             <p className="text-gray-300 max-w-2xl mx-auto">Encuéntranos fácilmente y disfruta de la mejor experiencia gastronómica</p>
           </div>
           
-          <div className="h-[500px] w-full mb-10 bg-gray-700 rounded-lg overflow-hidden border border-gray-700 shadow-md">
-            <MapComponent />
+          <div className="h-[500px] w-full mb-10 bg-gray-700 rounded-lg overflow-hidden border border-gray-700 shadow-md relative">
+            {isMounted && <MapComponent />}
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
