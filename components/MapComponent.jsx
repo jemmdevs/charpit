@@ -25,22 +25,23 @@ export default function MapComponent() {
       center={position} 
       zoom={15} 
       style={{ height: '100%', width: '100%' }}
+      className="z-10 overflow-hidden"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position} icon={customIcon}>
-        <Popup>
-          <div>
-            <h3 className="font-bold text-gray-800">Char Pit</h3>
-            <p className="text-gray-700">Av. de la Escultora 'la Roldana', 15, local 14</p>
-            <p className="text-gray-700">41500 Alcalá de Guadaíra, Sevilla</p>
+        <Popup className="custom-popup">
+          <div className="p-1">
+            <h3 className="font-bold text-gray-800 font-heading">The Char Pit</h3>
+            <p className="text-gray-700 text-sm">Av. de la Escultora 'la Roldana', 15, local 14</p>
+            <p className="text-gray-700 text-sm">41500 Alcalá de Guadaíra, Sevilla</p>
             <a 
               href="https://maps.google.com/?q=37.342083,-5.823167" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-amber-600 hover:text-amber-800"
+              className="text-amber-600 hover:text-amber-800 text-sm font-medium mt-2 inline-block"
             >
               Ver en Google Maps
             </a>

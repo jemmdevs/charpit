@@ -1,0 +1,34 @@
+/* Fix Leaflet horizontal overflow issues */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.leaflet-pane,
+.leaflet-control,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 1 !important;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* Override z-index */
+.custom-popup .leaflet-popup-content-wrapper {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-radius: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.custom-popup .leaflet-popup-tip {
+  background-color: #1e1e1e;
+}
+
+/* Make sure controls don't overflow */
+.leaflet-control-container {
+  overflow: hidden;
+  position: relative;
+} 
